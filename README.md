@@ -81,10 +81,8 @@ Berikutnya compile dan upload program ke dalam Arduino board. Perhatikan hasil y
 
 https://github.com/user-attachments/assets/d489cc42-f489-404b-93de-cca64eafb324
 
-Selanjutnya praktikan diminta melakukan percobaan untuk memberikan perintah pada LED untuk hidup (ON) dan mati (OFF) dengan menggunakan perintah yang diketikkan melalui Serial Monitor.
-
 <div align="center">
-  Percobaan pada modul ini dapat diakses melalui
+  Selanjutnya praktikan diminta melakukan percobaan untuk memberikan perintah pada LED untuk hidup (ON) dan mati (OFF) dengan menggunakan perintah yang diketikkan melalui Serial Monitor. Percobaan pada modul ini dapat diakses melalui
   <table border="1" align="center" width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td>
@@ -133,10 +131,8 @@ Berikutnya compile dan upload program ke dalam Arduino board. Perhatikan hasil y
 
 https://github.com/user-attachments/assets/f093c6b6-7f0c-47d5-9ed7-c90b6afa22fa
 
-Selanjutnya praktikan diminta melakukan percobaan untuk membaca nilai analog dari potensiometer menggunakan LCD I2C.
-
 <div align="center">
-  Percobaan pada modul ini dapat diakses melalui
+  Selanjutnya praktikan diminta melakukan percobaan untuk membaca nilai analog dari potensiometer menggunakan LCD I2C. Percobaan pada modul ini dapat diakses melalui
   <table border="1" align="center" width="100%" cellpadding="0" cellspacing="0">
   <tr>
     <td>
