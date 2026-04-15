@@ -81,7 +81,7 @@ Berikutnya compile dan upload program ke dalam Arduino board. Perhatikan hasil y
 
 https://github.com/user-attachments/assets/d489cc42-f489-404b-93de-cca64eafb324
 
-Selanjutnya praktikan diminta untuk melakukan percobaan untuk memberikan perintah pada LED untuk hidup (ON) dan mati (OFF) dengan menggunakan perintah yang diketikkan melalui Serial Monitor.
+Selanjutnya praktikan diminta melakukan percobaan untuk memberikan perintah pada LED untuk hidup (ON) dan mati (OFF) dengan menggunakan perintah yang diketikkan melalui Serial Monitor.
 
 <div align="center">
   Percobaan pada modul ini dapat diakses melalui
@@ -99,8 +99,61 @@ Selanjutnya praktikan diminta untuk melakukan percobaan untuk memberikan perinta
 </div>
 
 ### Percobaan 3B: Inter-Integrated Circuit (I2C)
+Inter-Integrated Circuit atau I2C merupakan sebuah protokol komunikasi yang digunakan untuk pertukaran data antar perangkat mikrokontroler dan sensor atau pun perangkat lainnya. I2C dirancang untuk menghubungkan berbagai perangkat dalam sebuah sistem menggunakan jalur komunikasi bersama.
+
+Berikut adalah contoh untuk mencetak tulisan pada I2C dengan menggunakan library ```LiquidCrystal_I2C```
+
+```cpp
+#include <LiquidCrystal_I2C.h>
+
+const int col = 16;
+const int row = 2;
+
+LiquidCrystal_I2C lcd(0x20, col, row);
+
+void setup() {
+  lcd.init();        // Inisialisasi LCD
+  lcd.clear();       // Membersihkan tampilan LCD
+  lcd.backlight();   // Menghidupkan lampu latar (backlight)
+
+  // Menampilkan pesan pada LCD
+  lcd.setCursor(2, 0);  // Posisi kolom ke-2, baris ke-0
+  lcd.print("Hello World!");
+
+  lcd.setCursor(2, 1);  // Posisi kolom ke-2, baris ke-1
+  lcd.print("Tutorial LCD");
+}
+
+void loop() {
+  // Tidak ada perintah berulang
+}
+```
+
+Berikutnya compile dan upload program ke dalam Arduino board. Perhatikan hasil yang terjadi, apakah sesuai dengan spesifikasi atau tidak. Contoh program berikut dengan menggunakan alternatif library ```LiquidCrystal_I2C``` yaitu ```Adafruit_LiquidCrystal.h```
+
+https://github.com/user-attachments/assets/f093c6b6-7f0c-47d5-9ed7-c90b6afa22fa
+
+Selanjutnya praktikan diminta melakukan percobaan untuk membaca nilai analog dari potensiometer menggunakan LCD I2C.
+
+<div align="center">
+  Percobaan pada modul ini dapat diakses melalui
+  <table border="1" align="center" width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td>
+      <h2>
+        <a href="https://github.com/reslabunsoed/modul3_protokol_komunikasi/tree/2e873565382d1b693322ec329266630ff9a45819/Percobaan%202">
+          Percobaan 3B: Inter-Intergrated Circuit (I2C)
+        </a>
+      </h2>
+    </td>
+  </tr>
+  </table>
+</div>
 
 ## 📚 Pertanyaan Praktikum
+1.	Sebutkan dan jelaskan keuntungan dan kerugian menggunakan UART dan I2C!
+2.	Bagaimana peran alamat I2C pada LCD (misalnya 0x27 vs 0x20)? Berikan penjelasan!
+3.	Jika UART dan I2C digabung dalam satu sistem (misalnya input dari Serial Monitor, output ke LCD), bagaimana alur kerja sistem tersebut? Bagaimana Arduino mengelola dua protokol sekaligus?
 
 ## 🧰 Mengakhiri Percobaan
 
